@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>荲世</title>
   
-  
+  <subtitle>Fly, fly away. Like a bird in the sky. See the world on my behalf...</subtitle>
   <link href="https://kisekis.github.io/atom.xml" rel="self"/>
   
   <link href="https://kisekis.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://kisekis.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Liui</name>
     
   </author>
   
