@@ -6,7 +6,7 @@
   <link href="https://kisekis.github.io/atom.xml" rel="self"/>
   
   <link href="https://kisekis.github.io/"/>
-  <updated>2021-10-07T16:22:03.171Z</updated>
+  <updated>2021-10-08T01:17:15.106Z</updated>
   <id>https://kisekis.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://kisekis.github.io/2021/10/08/test/"/>
+    <id>https://kisekis.github.io/2021/10/08/test/</id>
+    <published>2021-10-08T01:17:15.000Z</published>
+    <updated>2021-10-08T01:17:15.106Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>test_my_site</title>
