@@ -34,9 +34,9 @@
     <link href="https://kisekis.github.io/2021/10/08/test12/"/>
     <id>https://kisekis.github.io/2021/10/08/test12/</id>
     <published>2021-10-08T12:19:25.000Z</published>
-    <updated>2021-10-08T13:05:07.424Z</updated>
+    <updated>2021-10-08T13:09:50.652Z</updated>
     
-    <content type="html"><![CDATA[<p>$\frac{a}{b}$</p><p>$hello,world$</p><p>$\Sigma_{n=1}^{\infty}$</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>==testhighlight==</p>]]></content>
+    <content type="html"><![CDATA[<p>$\frac{a}{b}$</p><p>$hello,world$</p><p>$\Sigma_{n=1}^{\infty}$</p><p>$$\Sigma_{n=1}^{\infty}$$<br>$$<br>hello world,\Sigma_{n=1}^{\infty}<br>$$</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>==testhighlight==</p>]]></content>
     
     
       
@@ -44,7 +44,7 @@
     <summary type="html">&lt;p&gt;$\frac{a}{b}$&lt;/p&gt;
 &lt;p&gt;$hello,world$&lt;/p&gt;
 &lt;p&gt;$\Sigma_{n=1}^{\infty}$&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s</summary>
+&lt;p&gt;$$\Sigma_{n=1}^{\infty}$$&lt;br&gt;$$&lt;br&gt;hello world,\Sigma_{n=1}^{\in</summary>
       
     
     
