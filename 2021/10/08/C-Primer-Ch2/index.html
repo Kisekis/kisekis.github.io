@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kisekis.github.io/null">
 <meta property="article:published_time" content="2021-10-08T14:43:19.000Z">
-<meta property="article:modified_time" content="2021-10-09T08:31:18.708Z">
+<meta property="article:modified_time" content="2021-10-10T15:52:23.989Z">
 <meta property="article:author" content="Liui">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -155,7 +155,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        200
+                        ~2.03K
                     
                     字
                 </li>
@@ -164,11 +164,11 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1633768278708"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1633881143989"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">列表初始化</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">列表初始化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">复合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">2.2.</span> <span class="toc-text">指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">2.3.</span> <span class="toc-text">复合类型的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-number">2.4.</span> <span class="toc-text">const</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A1%B6%E5%B1%82const"><span class="toc-number">2.4.1.</span> <span class="toc-text">顶层const</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#constexpr%E5%92%8C%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.5.</span> <span class="toc-text">constexpr和常量表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">处理类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">3.1.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%AB%E5%90%8D%E5%A3%B0%E6%98%8E"><span class="toc-number">3.2.</span> <span class="toc-text">别名声明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">术语表</span></a></li></ol>
                 </div>
             
             <hr />
@@ -182,6 +182,60 @@
 <p>​            int a{b}; //报错</p>
 <p>​            int a(b); //不报错，但丢失信息</p>
 </blockquote>
+<h3 id="复合类型"><a href="#复合类型" class="headerlink" title="复合类型"></a>复合类型</h3><h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 100;</span><br><span class="line">int &amp;b = a;</span><br><span class="line">//引用即别名</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不能定义引用的引用</p>
+</blockquote>
+<h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//空指针</span><br><span class="line">int *p1 = 0;</span><br><span class="line">int *p2 = nullptr;</span><br><span class="line">int *p3 = NULL;</span><br></pre></td></tr></table></figure>
+<p>空指针最好使用 nullptr 来定义</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define NULL ((void*)0) // NULL in C</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define NULL 0 // NULL in C++</span><br></pre></td></tr></table></figure>
+<p>why different?</p>
+<p>因为C++中不能将void <em>类型的指针<em>*隐式转换</em></em>成其他指针类型</p>
+<p>而整型字面量0可以隐式转换成任意类型的空指针常量</p>
+</blockquote>
+<p>而 nullptr 并非整型类别，甚至也不是指针类型，但是==能转换成任意指针类型==。nullptr的实际类型是std:nullptr_t。</p>
+<blockquote>
+<p>建议初始化所有的指针，要么定义了对象后再定义指针指向</p>
+<p>要么置为 nullptr</p>
+</blockquote>
+<p>void* 可以存放任意类型的指针，即单纯指向一个地址的指针（不知道类型）</p>
+<h4 id="复合类型的声明"><a href="#复合类型的声明" class="headerlink" title="复合类型的声明"></a>复合类型的声明</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int* p1,p2  -&gt; int* p1 ; int p2;</span><br><span class="line"></span><br><span class="line">int *p1,*p2;</span><br></pre></td></tr></table></figure>
+<p>指向指针的引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i = 1;</span><br><span class="line">int *p;</span><br><span class="line">int *&amp;r = p; //r是对指针p的引用</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>面对一条复杂的指针或引用声明时应从右往左阅读。</p>
+<p>即先&amp;（最直接影响，代表是引用）</p>
+<p>后int *（表明引用的类型）</p>
+</blockquote>
+<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><p>const仅被设置成在文件内有效</p>
+<p>如果想要在其他文件中也用 const 声明的量，需要加 extern（声明和定义都要加）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const int a = 10;</span><br><span class="line">const int &amp;b = a; // right</span><br><span class="line">int &amp;c = a; // wrong</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i = 10;</span><br><span class="line">const int &amp;a = i; //允许const int &amp;绑定到int上</span><br><span class="line">const int &amp;b = 10; //允许常量引用</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double a = 3.14;</span><br><span class="line">const int &amp;b = a; //可以由double转为const int类型的temp变量再转为对其引用</span><br></pre></td></tr></table></figure>
+<h5 id="顶层const"><a href="#顶层const" class="headerlink" title="顶层const"></a>顶层const</h5><h4 id="constexpr和常量表达式"><a href="#constexpr和常量表达式" class="headerlink" title="constexpr和常量表达式"></a>constexpr和常量表达式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const int a = 10;</span><br><span class="line">const int b = a + 1; //是常量表达式，在编译过程中就能得到结果</span><br><span class="line"></span><br><span class="line">const int c = getC(); //不是常量表达式，因为getC要到运行时才能返回一个值</span><br></pre></td></tr></table></figure>
+<p>constexpr 类型，用来检验是不是常量表达式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">constexpr int sz = size();//只有当size()是一个constexpr函数时才正确</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const int *p = nullptr; //p是一个指向整型数量的指针</span><br><span class="line">constexpr int *q = nullptr; //q是一个指向整数的常量指针</span><br></pre></td></tr></table></figure>
+<h3 id="处理类型"><a href="#处理类型" class="headerlink" title="处理类型"></a>处理类型</h3><h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">typedef int myint; //myint 同义 int</span><br><span class="line">typedef myint myintS, *p;//myintS 同义 myint 同义 int,*p 同义 *int</span><br></pre></td></tr></table></figure>
+<h4 id="别名声明"><a href="#别名声明" class="headerlink" title="别名声明"></a>别名声明</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using SI = sales_items; //using关键词</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">typedef char *pstring; //pstring 是 char*类型的别名</span><br><span class="line">const pstring cstr = 0; //A</span><br><span class="line">const char *cstr = 0; //B</span><br><span class="line">//A,B 不一样，不可以直接替换</span><br><span class="line">//因为A中 cstr为指向char的常量指针</span><br><span class="line">//B中 cstr为指向const char的指针</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto 类型 //接受不同类型参数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">decltype 类型 //返回函数返回值或变量的类型</span><br><span class="line">decltype(f())；</span><br><span class="line">decltype(x);</span><br></pre></td></tr></table></figure>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#define //设置预处理变量</span><br><span class="line">#ifdef //当且仅当变量已定义时为真</span><br><span class="line">#ifndef //当且仅当变量未定义时为真</span><br><span class="line">#endif //结束</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为了防止头文件被多次包含</p>
+<p>头文件保护符应该一直记得加上</p>
+</blockquote>
+<h3 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h3><ul>
+<li>alias 别名</li>
+<li>escape sequence 转义序列 : \x , …</li>
+<li>header guard 头文件保护符</li>
+<li>in scope 在作用域内</li>
+<li>literal 字面值</li>
+<li>local scope 局部作用域</li>
+</ul>
 
         </div>
         
@@ -277,7 +331,7 @@ e.g.    long dou...`;
                     <a class="tag-none-link" href="/tags/C/" rel="tag">C++</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-10-09</span>
+                <span>最后编辑：2021-10-10</span>
                 </div>
             </div>
         </footer>
@@ -289,6 +343,10 @@ e.g.    long dou...`;
                 <a title=" C++Primer-Ch1" href="/2021/10/08/C-Primer-Ch1/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" C++Primer-Ch3" href="/2021/10/11/C-Primer-Ch3/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -330,7 +388,7 @@ e.g.    long dou...`;
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">列表初始化</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">列表初始化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-text">复合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-text">指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-text">复合类型的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-text">const</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A1%B6%E5%B1%82const"><span class="toc-text">顶层const</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#constexpr%E5%92%8C%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">constexpr和常量表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E7%B1%BB%E5%9E%8B"><span class="toc-text">处理类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%AB%E5%90%8D%E5%A3%B0%E6%98%8E"><span class="toc-text">别名声明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-text">术语表</span></a></li></ol>
     </div>
 </aside>
                 
@@ -341,7 +399,7 @@ e.g.    long dou...`;
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/C/" style="font-size: 0.6em;">C++</a>
+        <a href="/tags/C/" style="font-size: 0.8em;">C++</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 0.6em;">数据结构</a>
       </div>
   </aside>
 
@@ -352,6 +410,18 @@ e.g.    long dou...`;
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/10/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B7%A6%E5%BC%8F%E5%A0%86/"><i class="fa  fa-book"></i> 数据结构-左式堆</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/10/11/C-Primer-Ch3/"><i class="fa  fa-book"></i> C++Primer-Ch3</a>
+            
+          
         
           
           

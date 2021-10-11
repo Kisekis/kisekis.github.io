@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>C++Primer-Ch1 | 荲世</title>
+  <title>C++Primer-Ch3 | 荲世</title>
   <meta name="author" content="Liui" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,20 +13,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="C++" />
+    <meta name="keywords" content="" />
   
-  <meta name="description" content="输入输出输入输出库iostream 库，包含 istream 输入流和 ostream 输出流。 cin是istream的一个对象 cout(标准输出)，cerr(错误信息)，clog(一般性信息)是ostream的对象 endl 可以结束当前行,并将缓冲区(buffer)中的内容刷到设备中  要及时刷新缓冲区，防止调试时有待输出信息停留在buffer中  读取数量不定的输入数据1while(st">
+  <meta name="description" content="命名空间的 using 声明1using namespace::name; &#x2F;&#x2F;using形式 12using std::cin;cin &gt;&gt; i; 头文件不应该包含 using 声明 stringstring的操作12os&lt;&lt;s &#x2F;&#x2F;将s写入到输出流 os 中，返回 osis&gt;&gt;s &#x2F;&#x2F;从is中读取字符串赋给s，字符串以空白分割，返回is 使用 getline">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++Primer-Ch1">
-<meta property="og:url" content="https://kisekis.github.io/2021/10/08/C-Primer-Ch1/index.html">
+<meta property="og:title" content="C++Primer-Ch3">
+<meta property="og:url" content="https://kisekis.github.io/2021/10/11/C-Primer-Ch3/index.html">
 <meta property="og:site_name" content="荲世">
-<meta property="og:description" content="输入输出输入输出库iostream 库，包含 istream 输入流和 ostream 输出流。 cin是istream的一个对象 cout(标准输出)，cerr(错误信息)，clog(一般性信息)是ostream的对象 endl 可以结束当前行,并将缓冲区(buffer)中的内容刷到设备中  要及时刷新缓冲区，防止调试时有待输出信息停留在buffer中  读取数量不定的输入数据1while(st">
+<meta property="og:description" content="命名空间的 using 声明1using namespace::name; &#x2F;&#x2F;using形式 12using std::cin;cin &gt;&gt; i; 头文件不应该包含 using 声明 stringstring的操作12os&lt;&lt;s &#x2F;&#x2F;将s写入到输出流 os 中，返回 osis&gt;&gt;s &#x2F;&#x2F;从is中读取字符串赋给s，字符串以空白分割，返回is 使用 getline">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kisekis.github.io/null">
-<meta property="article:published_time" content="2021-10-08T14:20:39.000Z">
-<meta property="article:modified_time" content="2021-10-09T08:31:13.044Z">
+<meta property="article:published_time" content="2021-10-11T01:19:20.000Z">
+<meta property="article:modified_time" content="2021-10-11T02:15:38.085Z">
 <meta property="article:author" content="Liui">
-<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://kisekis.github.io/null">
 <meta name="twitter:site" content="@liui2002">
@@ -145,17 +144,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">C++Primer-Ch1</h1>
+                <h1 class="kratos-entry-title text-center">C++Primer-Ch3</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-10-08</li>
+                <li><i class="fa fa-calendar"></i> 2021-10-11</li>
                 <li><i class="fa fa-user"></i> 作者 Liui</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        511
+                        1136
                     
                     字
                 </li>
@@ -164,37 +163,36 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1633768273044"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1633918538085"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">1.</span> <span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">输入输出库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E9%87%8F%E4%B8%8D%E5%AE%9A%E7%9A%84%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">1.2.</span> <span class="toc-text">读取数量不定的输入数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">术语表</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84-using-%E5%A3%B0%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">命名空间的 using 声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#string"><span class="toc-number">2.</span> <span class="toc-text">string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">string的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-getline-%E8%AF%BB%E5%8F%96%E4%B8%80%E6%95%B4%E8%A1%8C"><span class="toc-number">2.2.</span> <span class="toc-text">使用 getline() 读取一整行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string-size-type-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.3.</span> <span class="toc-text">string::size_type 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E5%8A%A0%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">string加法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E5%8D%95%E5%AD%97%E7%AC%A6%E5%88%A4%E6%96%AD"><span class="toc-number">2.5.</span> <span class="toc-text">string单字符判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AFstring%E6%AF%8F%E4%B8%AA%E5%AD%97%E7%AC%A6"><span class="toc-number">2.6.</span> <span class="toc-text">循环string每个字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8-itreator"><span class="toc-number">2.7.</span> <span class="toc-text">迭代器 itreator</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a></li></ol>
                 </div>
             
             <hr />
-            <h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><h4 id="输入输出库"><a href="#输入输出库" class="headerlink" title="输入输出库"></a>输入输出库</h4><p>iostream 库，包含 istream 输入流和 ostream 输出流。</p>
-<p>cin是istream的一个对象</p>
-<p>cout(标准输出)，cerr(错误信息)，clog(一般性信息)是ostream的对象</p>
-<p>endl 可以结束当前行,并将缓冲区(buffer)中的内容刷到设备中</p>
+            <h3 id="命名空间的-using-声明"><a href="#命名空间的-using-声明" class="headerlink" title="命名空间的 using 声明"></a>命名空间的 using 声明</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span>::name; <span class="comment">//using形式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> std::cin;</span><br><span class="line">cin &gt;&gt; i;</span><br></pre></td></tr></table></figure>
+<p><strong>头文件不应该包含 using 声明</strong></p>
+<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><h4 id="string的操作"><a href="#string的操作" class="headerlink" title="string的操作"></a>string的操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os&lt;&lt;s //将s写入到输出流 os 中，返回 os</span><br><span class="line">is&gt;&gt;s //从is中读取字符串赋给s，字符串以空白分割，返回is</span><br></pre></td></tr></table></figure>
+<h4 id="使用-getline-读取一整行"><a href="#使用-getline-读取一整行" class="headerlink" title="使用 getline() 读取一整行"></a>使用 getline() 读取一整行</h4><p>如果希望能在最终得到的字符串中保留输入的空白符，需要用getline()。</p>
+<p>getline()的参数是一个输入流和一个string对象。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">getline</span>(cin,lin)) &#123;</span><br><span class="line">	cout&lt;&lt;line&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="string-size-type-类型"><a href="#string-size-type-类型" class="headerlink" title="string::size_type 类型"></a>string::size_type 类型</h4><p>s.size() 返回的是 size_type 类型，这是一个无符号数</p>
+<p>因此如果 s.size() 和 有符号数n 比较</p>
+<p>n是个负数，那么n会自动转为无符号数，将比s.size()大</p>
 <blockquote>
-<p>要及时刷新缓冲区，防止调试时有待输出信息停留在buffer中</p>
+<p>如果一条表达式中有size()函数就不要再使用int，可以避免混用int和unsigned_int</p>
 </blockquote>
-<h4 id="读取数量不定的输入数据"><a href="#读取数量不定的输入数据" class="headerlink" title="读取数量不定的输入数据"></a>读取数量不定的输入数据</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(std::cin &gt;&gt; value)</span><br></pre></td></tr></table></figure>
-<p>当遇到EOF，或者无效输入(如类型不匹配)，istream对象条件会变为false。</p>
-<ul>
-<li>Windows : Ctrl + Z -&gt; Enter</li>
-<li>Unix : Ctrl + D</li>
-</ul>
-<h3 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h3><ul>
-<li>assignment 赋值</li>
-<li>buffer 缓冲区</li>
-<li>comment 注释</li>
-<li>curly brace 花括号</li>
-<li><p>parameter 参数 A <strong>parameter</strong> is a variable <strong>in a</strong> method definition.</p>
-</li>
-<li><p>argument 实参 <strong>Arguments</strong> are the data you pass into the method’s <strong>parameters</strong>.</p>
-</li>
-</ul>
+<h4 id="string加法"><a href="#string加法" class="headerlink" title="string加法"></a>string加法</h4><p>字符串字面值 “xxxx”</p>
+<p>字符串字面值和string不是一种类型！！！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string s = s1 + &quot;xxxx&quot; + s2 //正确</span><br><span class="line">string s = s1 + &quot;xxxx&quot; + &quot;yyyy&quot; //错误，字符串字面值与字符串字面值不能相邻相加</span><br><span class="line">string s = s1 + s2 //正确</span><br></pre></td></tr></table></figure>
+<h4 id="string单字符判断"><a href="#string单字符判断" class="headerlink" title="string单字符判断"></a>string单字符判断</h4><p>在cctype头文件中可以检测一个字符的属性</p>
+<p>如是否为数字，是否为小写，是否为空白，是否为标点符号……</p>
+<h4 id="循环string每个字符"><a href="#循环string每个字符" class="headerlink" title="循环string每个字符"></a>循环string每个字符</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (auto c : str) &#123;</span><br><span class="line">&#125;</span><br><span class="line">//推荐使用此形式</span><br><span class="line">for (auto &amp;c : str) &#123;</span><br><span class="line">	c = toupper(c);</span><br><span class="line">&#125;</span><br><span class="line">//如果要修改string每个字符，需要传入引用</span><br><span class="line">//如果非引用，则 auto c : str 会将str的每个元素*拷贝*给c</span><br></pre></td></tr></table></figure>
+<h4 id="迭代器-itreator"><a href="#迭代器-itreator" class="headerlink" title="迭代器 itreator"></a>迭代器 itreator</h4><p>但凡是使用了迭代器的循环体，都不要向循环体容器中添加元素</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a[] = &#123;0,1,2&#125;;</span><br><span class="line">int b[] = a; //错误</span><br><span class="line">c = a; //错误</span><br><span class="line">不可以用数组给其他数组赋值，拷贝</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int (*Parray)[10] = &amp;arr; //由内向外读</span><br><span class="line">int (&amp;arrRef)[10] = arr; //由内向外读</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -248,7 +246,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://kisekis.github.io/2021/10/08/C-Primer-Ch1/",
+                text: "https://kisekis.github.io/2021/10/11/C-Primer-Ch3/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -260,12 +258,12 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://kisekis.github.io/2021/10/08/C-Primer-Ch1/";
-            const title         = "「C++Primer-Ch1」";
-            const excerpt       = `输入输出输入输出库iostream 库，包含 istream 输入流和 ostream 输出流。
-cin是istream的一个对象
-cout(标准输出)，cerr(错误信息)，clog(一般性信息)是ostream的对象
-endl 可...`;
+            const hostUrl       = "https://kisekis.github.io/2021/10/11/C-Primer-Ch3/";
+            const title         = "「C++Primer-Ch3」";
+            const excerpt       = `命名空间的 using 声明1using namespace::name; //using形式
+12using std::cin;cin &gt;&gt; i;
+头文件不应该包含 using 声明
+stringstring的操作12o...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -284,10 +282,10 @@ endl 可...`;
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/C/" rel="tag">C++</a>
+                    
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-10-09</span>
+                <span>最后编辑：2021-10-11</span>
                 </div>
             </div>
         </footer>
@@ -295,9 +293,13 @@ endl 可...`;
     
         <nav class="navigation post-navigation clearfix" role="navigation">
             
+            <div class="nav-previous clearfix">
+                <a title=" C++Primer-Ch2" href="/2021/10/08/C-Primer-Ch2/">&lt; 上一篇</a>
+            </div>
+            
             
             <div class="nav-next clearfix">
-                <a title=" C++Primer-Ch2" href="/2021/10/08/C-Primer-Ch2/">下一篇 &gt;</a>
+                <a title=" 数据结构-左式堆" href="/2021/10/11/数据结构-左式堆/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -340,7 +342,7 @@ endl 可...`;
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%BA%93"><span class="toc-text">输入输出库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E9%87%8F%E4%B8%8D%E5%AE%9A%E7%9A%84%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">读取数量不定的输入数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-text">术语表</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84-using-%E5%A3%B0%E6%98%8E"><span class="toc-text">命名空间的 using 声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#string"><span class="toc-text">string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">string的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-getline-%E8%AF%BB%E5%8F%96%E4%B8%80%E6%95%B4%E8%A1%8C"><span class="toc-text">使用 getline() 读取一整行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string-size-type-%E7%B1%BB%E5%9E%8B"><span class="toc-text">string::size_type 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E5%8A%A0%E6%B3%95"><span class="toc-text">string加法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E5%8D%95%E5%AD%97%E7%AC%A6%E5%88%A4%E6%96%AD"><span class="toc-text">string单字符判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AFstring%E6%AF%8F%E4%B8%AA%E5%AD%97%E7%AC%A6"><span class="toc-text">循环string每个字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8-itreator"><span class="toc-text">迭代器 itreator</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li></ol>
     </div>
 </aside>
                 
